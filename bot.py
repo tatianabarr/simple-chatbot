@@ -33,10 +33,10 @@ def count():
 
 def test():
     print("Let's test your knowledge.")
-    print("Do you like jazz?")
+    print("What is the answer to the Ultimate Question of Life, the Universe, and Everything")
 
     answer = int(input())
-    while answer != 3:
+    while answer != 42:
         print('Please, try again.')
         break
     end()
