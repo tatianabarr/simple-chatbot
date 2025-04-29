@@ -1,3 +1,4 @@
+
 def greet(bot_name, birth_year):
     print('Hello! My name is ' + bot_name + '.')
     print('I was created in ' + birth_year + '.')
@@ -26,24 +27,32 @@ def count():
 
     num = int(input())
     curr = 0
-    while curr <= num:
-        print(curr, '!')
-        curr = curr + 1
+    if num >= 0:
+        while curr <= num:
+            print(curr, '!')
+            curr = curr + 1
+    else:
+        while curr >= num:
+            print(curr, '!')
+            curr = curr - 1
 
 
 def test():
     print("Let's test your knowledge.")
     print("What is the answer to the Ultimate Question of Life, the Universe, and Everything")
 
-    answer = int(input())
-    while answer != 42:
-        print('Please, try again.')
-        break
-    end()
+    right_answer = 42
+    while True:
+        answer = int(input())
+        if answer == right_answer:
+            end()
+            break
+        else:
+            print('Please, try again.')
 
 
 def end():
-    print('Congratulations, have a nice day!')
+    print("That's correct! Congratulations, and have a nice day!")
 
 
 greet('Charlie', '2025')  # change it as you need
